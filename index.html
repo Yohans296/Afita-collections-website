@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website GitHub Pages</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-theme");
+        }
+        function animateButton(btn) {
+            btn.classList.add("clicked");
+            setTimeout(() => btn.classList.remove("clicked"), 300);
+        }
+    </script>
+    <style>
+        body {
+            transition: background 0.5s, color 0.5s;
+        }
+        .dark-theme {
+            background-color: #333;
+            color: white;
+        }
+        .theme-button {
+            margin: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #f0ad4e;
+            color: white;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .clicked {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Website Resmi Afita</h1>
+      <p>pilihan tas yag menarik perhatianmu ada disini untukmu</p>
+        <button class="theme-button" onclick="toggleTheme(); animateButton(this);">Ganti Tema</button>
+        <nav>
+            <ul>
+                <li><a href="#about">Tentang afita</a></li>
+                <li><a href="#projects">Pilihan tas</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>Tentang afita</h2>
+        <p>perusahaan tas kecil yang ada di kudus kretes.</p>
+        <img src="images/profile.jpg" alt="Foto Profil" width="200">
+    </section>
+    
+    <section id="projects">
+        <h2>Pilihan tas</h2>
+        <p>Berikut adalah beberapa tas yang akan dijual di pasaran.</p>
+        <img src="images/project1.jpg" alt="Proyek 1" width="300">
+        <img src="images/project2.jpg" alt="Proyek 2" width="300">
+    </section>
+    
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Email: afitacollecttions810@gmail.com</p>
+        <img src="images/contact.jpg" alt="Kontak" width="200">
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Website afita. Semua Hak Dilindungi.</p>
+    </footer>
+</body>
+</html>
